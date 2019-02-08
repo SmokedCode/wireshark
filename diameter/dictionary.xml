@@ -8608,6 +8608,7 @@
 	<vendor vendor-id="Tango"			code="13421"	name="Tango Telecom Limited"/>
 	<vendor vendor-id="ChinaTelecom"		code="81000"	name="China Telecom"/>
 	<vendor vendor-id="TGPPCX"			code="16777216"	name="3GPP CX/DX"/>
+	<vendor vendor-id="Oracle"			code="3512"	name="Oracle"/>	
 	<!-- *********************** End Vendors ************************** -->
 
 	&nasreq;
