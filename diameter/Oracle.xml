@@ -21,3 +21,288 @@
 		</grouped>
 	</avp>
 </vendor>
+
+<vendor vendor-id="Oracle" code="3512" name="Oracle">
+<!-- Referance from https://docs.oracle.com/cd/E70765_01/doc.113/e70772/pc_cst_apx.htm#ICPPC270 -->
+<!-- Last updated on: 2018-07-24 -->
+
+	<avp name="ORA-Remaining-Balance" code="241" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="ORA-Balance-Element"/>
+			<gavp name="ORA-Applicable-Services"/>
+			<gavp name="ORA-Subscriber-Id"/>
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Balance-Element" code="243" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="ORA-Balance-Element-Id"/>
+			<gavp name="Unit-Value"/>
+			<gavp name="ORA-Balance-Item"/>
+			<gavp name="ORA-Earliest-Expiry-Time"/>
+			<gavp name="ORA-Credit-Floor"/>
+			<gavp name="ORA-Credit-Ceiling"/>
+			<gavp name="ORA-Percent-Credit-Threshold"/>
+			<gavp name="ORA-Fixed-Credit-Threshold"/>
+			<gavp name="ORA-Balance-Item"/>
+			<gavp name="Service-Identifier"/>
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Applicable-Services" code="242" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="Service-Identifier"/>
+			<gavp name="Rating-Group"/>
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Subscriber-Id" code="235" vendor-bit="may" vendor-id="Oracle">
+		<type type-name="OctetString"/>
+	</avp>
+
+	<avp name="ORA-Balance-Element-Id" code="233" vendor-bit="may" vendor-id="Oracle">
+		<type type-name="Unsigned32"/>
+	</avp>
+
+	<avp name="ORA-Balance-Item" code="244" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="Unit-Value"/>
+			<gavp name="ORA-Validity-Start-Time"/>
+			<gavp name="ORA-Validity-End-Time"/>
+			<gavp name="ORA-Consumed-Reservation-Amount"/>
+			<gavp name="ORA-Active-Reservation-Amount"/>			
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Earliest-Expiry-Time" code="245" vendor-bit="may" vendor-id="Oracle">
+		<type type-name="time"/>
+	</avp>
+	
+	<avp name="ORA-Validity-Start-Time" code="213" vendor-bit="may" vendor-id="Oracle">
+		<type type-name="time"/>
+	</avp>
+
+	<avp name="ORA-Validity-End-Time" code="214" vendor-bit="may" vendor-id="Oracle">
+		<type type-name="time"/>
+	</avp>
+
+	<avp name="ORA-Credit-Floor" code="252" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="Value-Digits"/>
+			<gavp name="Exponent"/>
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+
+	<avp name="ORA-Credit-Ceiling" code="253" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="Value-Digits"/>
+			<gavp name="Exponent"/>
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Percent-Credit-Threshold" code="254" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="ORA-Threshold-Value"/>
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+
+	<avp name="ORA-Fixed-Credit-Threshold" code="255" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="ORA-Threshold-Value"/>
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Consumed-Reservation-Amount" code="251" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="Value-Digits"/>
+			<gavp name="Exponent"/>			
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Active-Reservation-Amount" code="250" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="Value-Digits"/>
+			<gavp name="Exponent"/>			
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Threshold-Value" code="256" vendor-bit="may" vendor-id="Oracle">
+		<type type-name="UTF8String"/>
+	</avp>
+
+
+	<avp name="CC-ORA-Balance-Element" code="236" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="ORA-Balance-Element-Id"/>
+			<gavp name="Unit-Value"/>			
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Balance-Query-Mode" code="248" vendor-id="Oracle" vendor-bit="may">
+		<type type-name="Enumerated"/>
+		<enum name="SUMMARY" code="1"/>
+		<enum name="FULL" code="2"/>
+	</avp>
+
+
+	<avp name="ORA-Balance-Details" code="249" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="ORA-Balance-Element"/>	
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Customer-Cost-Information" code="231" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="ORA-Subscriber-Id"/>
+			<gavp name="ORA-Cost-Information"/>			
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+
+	<avp name="ORA-Credit-Threshold-Breach" code="301" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="ORA-Balance-Element-Id"/>
+			<gavp name="ORA-Current-Balance"/>
+			<gavp name="ORA-Breach-Direction"/>				
+			<gavp name="ORA-Fixed-Threshold-Values"/>	
+			<gavp name="ORA-Percentage-Threshold-Values"/>			
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Breach-Direction" code="307" vendor-id="Oracle" vendor-bit="may">
+		<type type-name="Enumerated"/>
+		<enum name="THRESHOLD_BREACH_UP" code="0"/>
+		<enum name="THRESHOLD_BREACH_DOWN" code="1"/>
+	</avp>
+
+	<avp name="ORA-Current-Balance" code="302" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="Value-Digits"/>
+			<gavp name="Exponent"/>			
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Fixed-Threshold-Values" code="303" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="ORA-Fixed-Threshold"/>
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+
+	<avp name="ORA-Fixed-Threshold" code="304" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="Value-Digits"/>
+			<gavp name="Exponent"/>		
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Percentage-Threshold-Values" code="305" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="ORA-Percentage-Threshold"/>
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>	
+
+	<avp name="ORA-Percentage-Threshold" code="306" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="Value-Digits"/>
+			<gavp name="Exponent"/>		
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Account-Topup" code="206" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="ORA-Recharge-Reference"/>
+			<gavp name="ORA-Balance"/>		
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Recharge-Reference" code="207" vendor-bit="may" vendor-id="Oracle">
+		<type type-name="UTF8String"/>
+	</avp>
+
+	<avp name="ORA-Balance" code="208" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="ORA-Balance-Element-Id"/>
+			<gavp name="Unit-Value"/>
+			<gavp name="ORA-Validity-Start-Time"/>				
+			<gavp name="ORA-Validity-Start-Relative"/>	
+			<gavp name="ORA-Validity-End-Time"/>	
+            <gavp name="ORA-Validity-End-Relative"/>	
+            <gavp name="ORA-First-Usage-Validity"/>	
+            <gavp name="ORA-Extend-Bucket-Validity"/>	
+            <gavp name="Service-Identifier"/>	
+            <gavp name="Rating-Group"/>			
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Extend-Bucket-Validity" code="228" vendor-id="Oracle" vendor-bit="may">
+		<type type-name="Enumerated"/>
+		<enum name="TRUE" code="1"/>
+		<enum name="FALSE" code="0"/>
+	</avp>
+
+	<avp name="ORA-Validity-End-Relative" code="216" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="ORA-Validity-Offset"/>
+			<gavp name="ORA-Validity-Unit"/>		
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-Validity-Start-Relative" code="215" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="ORA-Validity-Offset"/>
+			<gavp name="ORA-Validity-Unit"/>		
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="ORA-First-Usage-Validity" code="217" vendor-bit="may" vendor-id="Oracle">
+		<grouped>
+			<gavp name="ORA-Validity-Unit"/>
+			<gavp name="ORA-Validity-Offset"/>		
+			<!-- This grouped AVP holds any AVP -->
+		</grouped>
+	</avp>
+
+	<avp name="OORA-Validity-Offset" code="218" vendor-bit="may" vendor-id="Oracle">
+		<type type-name="Unsigned32"/>
+	</avp>
+
+	<avp name="ORA-Validity-Unit" code="219" vendor-id="Oracle" vendor-bit="may">
+		<type type-name="Enumerated"/>
+		<enum name="SECONDS" code="0"/>
+		<enum name="MINUTES" code="1"/>
+		<enum name="HOURS" code="2"/>
+		<enum name="DAYS" code="3"/>
+		<enum name="MONTHS" code="4"/>
+		<enum name="ACC_CYCLE" code="5"/>
+		<enum name="BILL_CYCLE" code="6"/>
+		<enum name="ABSOLUTE" code="7"/>
+		<enum name="INFINITE" code="8"/>
+	</avp>
+
+</vendor>
